@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 
 ## 🧭 Framework
 
-[![Overall architecture of UPAformer](figs/upaformer_overview.png)]
+[Overall architecture of UPAformer](figs/upaformer_overview.png)
 
 
 - **ARMNorm** calibrates modality-dependent distributions while retaining the original signal through a residual connection.
@@ -40,7 +40,7 @@ UPAformer_code/
 
 The experiments cover four heterogeneous platforms from **Soochow University (SUDA)**, **Paderborn University (PU)**, **Beijing Jiaotong University (BJUT)**, and **Huazhong University of Science and Technology (HUST)**.
 
-[![Experimental platforms and representative multimodal signals](figs/experimental_platforms.png)]
+[Experimental platforms and representative multimodal signals](figs/experimental_platforms.png)
 
 
 | Dataset | Equipment | Modalities | Modality signals | Signal length | Sampling rate | Health states |
