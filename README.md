@@ -16,6 +16,9 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 
 ## 🗂️ Repository Structure
 > **Code availability.** The complete code will be released immediately upon acceptance of the paper.
+> ![Code availability](https://img.shields.io/badge/Code%20availability-Released%20upon%20acceptance-red)
+
+The complete code will be released immediately upon acceptance of the paper.
 ```text
 UPAformer_code/
 ├── main.py                         # Training, validation, testing, and experiment loops
