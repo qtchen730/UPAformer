@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 
 ## 🧭 Framework
 
-% ![Overall architecture of UPAformer](figs/upaformer_overview.png)
+
 
 
 - **ARMNorm** calibrates modality-dependent distributions while retaining the original signal through a residual connection.
