@@ -13,7 +13,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 - **ARMPE** maps heterogeneous multimodal inputs into unified time, frequency, and time-frequency embeddings.
 - **PSAE** models representation-specific information and shared complementary information through private-shared attention.
 - A shared classification head produces predictions from the three representation branches.
- # ![Overall architecture of UPAformer](figs/upaformer_overview.png)
+ 
 
 ## 🗂️ Repository Structure
 ![Code availability](https://img.shields.io/badge/Code%20availability-Released%20upon%20acceptance-red)
