@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 
 ## 🧭 Framework
 
-[Overall architecture of UPAformer](figs/upaformer_overview.png)
+![Overall architecture of UPAformer](figs/upaformer_overview.png)
 
 
 - **ARMNorm** calibrates modality-dependent distributions while retaining the original signal through a residual connection.
@@ -40,7 +40,7 @@ UPAformer_code/
 
 The experiments cover four heterogeneous platforms from **Soochow University (SUDA)**, **Paderborn University (PU)**, **Beijing Jiaotong University (BJUT)**, and **Huazhong University of Science and Technology (HUST)**.
 
-[Experimental platforms and representative multimodal signals](figs/experimental_platforms.png)
+![Experimental platforms and representative multimodal signals](figs/experimental_platforms.png)
 
 
 | Dataset | Equipment | Modalities | Modality signals | Signal length | Sampling rate | Health states |
@@ -109,7 +109,38 @@ CUDA-enabled PyTorch is recommended for reproducing the complete experimental sw
 
 Place the prepared datasets under `dataset/` and verify the corresponding roots and task mappings in [`dataset/file_path.py`](dataset/file_path.py). Dataset-specific sampling rates, modality patch sizes, and transfer-task lists are configured near the beginning of [`main.py`](main.py).
 
-### 3. Run the experiments
+### 3. Default Experimental Settings
+
+| Parameter | Default value |
+|---|---:|
+| Optimizer | Adam |
+| Learning rate | \(3\times10^{-4}\) |
+| Batch size | 32 per source domain |
+| Training epochs | 100 |
+| Repeated runs | 10 |
+| Number of perception kernels | 128 |
+| Kernel length | 72 |
+| Unified embedding dimension | 160 |
+| PSAE layers | 1 |
+| Attention heads | 2 |
+| Dropout | 0.1 |
+| ARMNorm | Enabled |
+| ARMNorm residual weight | 0.1 |
+| Inter-domain consistency weight | 0.3 |
+| Classification head | Shared |
+| Final prediction | Average of three branch logits |
+
+The modality width of each perception kernel is dataset dependent:
+
+| Dataset | Total modalities | Modalities per kernel |
+|---|---:|---:|
+| SUDA | 7 | 6 |
+| PU | 3 | 2 |
+| BJUT | 3 | 2 |
+| HUST | 4 | 3 |
+
+
+### 4. Run the experiments
 
 From the project root, execute:
 
