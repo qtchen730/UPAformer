@@ -15,11 +15,9 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 - A shared classification head produces predictions from the three representation branches.
 
 ## 🗂️ Repository Structure
+![Code availability](https://img.shields.io/badge/Code%20availability-Released%20upon%20acceptance-red)
 
-> ![Code availability](https://img.shields.io/badge/Code%20availability-Released%20upon%20acceptance-red)
-> 
-> The complete code will be released immediately upon acceptance of the paper.
-
+The complete code will be released immediately upon acceptance of the paper.
 ```text
 UPAformer_code/
 ├── main.py                         # Training, validation, testing, and experiment loops
@@ -58,6 +56,17 @@ The experiments cover four heterogeneous platforms from **Soochow University (SU
 2. **PU:** Four compound conditions combine different rotational speeds, load torques, and radial forces, as listed below.
 3. **BJUT:** Four operating-frequency conditions were considered: 20, 25, 30, and 35 Hz.
 4. **HUST:** Four operating-frequency conditions were considered: 5, 10, 20, and 30 Hz.
+
+### Sample Statistics
+
+| Dataset | Health states | Samples per state per condition | Samples per condition | Conditions | Total samples | Source samples per task | Unknown-domain samples per task |
+|:--|--:|--:|--:|--:|--:|--:|--:|
+| **SUDA** | 4 | 50 | 200 | 4 | **800** | 600 | 200 |
+| **PU** | 4 | 61 | 244 | 4 | **976** | 732 | 244 |
+| **BJUT** | 5 | 64 | 320 | 4 | **1,280** | 960 | 320 |
+| **HUST** | 6 | 80 | 480 | 4 | **1,920** | 1,440 | 480 |
+
+The source-sample count corresponds to the three observed conditions in each leave-one-condition-out task; the remaining condition is used only as the unknown domain.
 
 ## 🔧 PU Operating Conditions
 
@@ -118,7 +127,7 @@ Place the prepared datasets under `dataset/` and verify the corresponding roots 
 | Parameter | Default value |
 |---|---:|
 | Optimizer | Adam |
-| Learning rate | \(3\times10^{-4}\) |
+| Learning rate | 3e-4 |
 | Batch size | 32 per source domain |
 | Training epochs | 100 |
 | Repeated runs | 10 |
