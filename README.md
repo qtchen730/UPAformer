@@ -15,7 +15,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 - A shared classification head produces predictions from the three representation branches.
 
 ## 🗂️ Repository Structure
-<span style="color:red">The complete code will be released immediately upon acceptance of the paper.</span>
+> **Code availability.** The complete code will be released immediately upon acceptance of the paper.
 ```text
 UPAformer_code/
 ├── main.py                         # Training, validation, testing, and experiment loops
