@@ -15,7 +15,7 @@ This repository contains the PyTorch implementation of **UPAformer**, a unified 
 - A shared classification head produces predictions from the three representation branches.
 
 ## 🗂️ Repository Structure
-
+<span style="color:red">The complete code will be released immediately upon acceptance of the paper.</span>
 ```text
 UPAformer_code/
 ├── main.py                         # Training, validation, testing, and experiment loops
@@ -26,8 +26,8 @@ UPAformer_code/
 │   ├── UPAformer.py                # UPAformer architecture and prediction heads
 │   ├── PSAEncoder.py               # Private-Shared Aggregation Encoder
 │   └── PSAE_Attention.py           # Private-shared attention operations
-├── MMD/
-│   └── MMD_calculation.py          # Inter-domain consistency loss
+├── IDCCLoss/
+│   └── loss_calculation.py          # Inter-domain consistency loss
 ├── data_loader/
 │   └── dataloader.py               # Dataset partitioning and batch construction
 ├── dataset/
